@@ -16,7 +16,7 @@ class ListMusicView(generics.ListAPIView):
     serializer_class = MusicSerializer
     search_fields = ['title']
     filter_backends = (filters.SearchFilter,)
-   # permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
 
 class PostMusicView(APIView):
     def post(self,request ,*args,**kwargs):
